@@ -45,9 +45,9 @@ jobs:
         with:
           java-version: ${{ env.JAVA_VERSION }}
           distribution: ${{ env.DISTRIBUTION }}
-          cache: 'maven'
+          cache: 'ant'
 
-      - name: Build with Maven
+      - name: Build with ant
         run: mvn clean install
 
       - name: Upload artifact for deployment job
